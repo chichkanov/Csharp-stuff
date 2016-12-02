@@ -1,8 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * ФИО: Чичканов Александр Германович
+ * Дисциплина: программирование
+ * Вариант: *
+ * Группа: 161.1
+ * Дата **.**.****
+ */
+
+
+using System;
 
 namespace KR2module
 {
