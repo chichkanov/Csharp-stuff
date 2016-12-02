@@ -6,7 +6,6 @@
  * Дата **.**.****
  */
 
-
 using System;
 
 namespace KR2module
