@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyLibrary
 {
-    public class ArrayTools
+    public class MyTools
     {
         private static Random rand = new Random();
         /// <summary>
@@ -52,10 +52,11 @@ namespace MyLibrary
         /// <param name="n">Элемент для ввода</param>
         /// <param name="text">Текст ввода</param>
         /// <param name="errorText">Текст ошибки ввода</param>
-        public static void ReadNumber(out int n, string text, string errorText)
+        /// <param name="check">Проверка валидности данных</param>
+        public static void ReadNumber(out int n, string text, string errorText, Func<int, bool> check = null)
         {
             Console.Write(text);
-            while (!int.TryParse(Console.ReadLine(), out n))
+            while (!int.TryParse(Console.ReadLine(), out n) || (check != null && !check(n)))
             {
                 Console.WriteLine(errorText);
                 Console.Write(text);
