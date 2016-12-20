@@ -8,6 +8,7 @@
 
 using System;
 using MyLibrary;
+using System.Linq;
 
 namespace KR2module
 {
@@ -15,17 +16,21 @@ namespace KR2module
     {
         static void Main(string[] args)
         {
+            Random rand = new Random();
             int number;
-            int number2;
+ 
+            int[] arr;
+
             Console.Title = "Chichkanov";
 
             do
             {
                 Console.Clear();
 
-                //Примеры ввода файла с проверкой на валидность и без
-                MyTools.ReadNumber(out number, "Enter a number: ", "Error", num => num > 0);
-                MyTools.ReadNumber(out number2, "Enter a second number: ", "Error");
+                //Примеры ввода файла с проверкой на валидность
+                IOTools.ReadInteger(out number, num => num > 0);
+
+                arr = new int[number];         
 
                 ShowProgramNotification();
             } while (Console.ReadKey().Key != ConsoleKey.Escape);
